@@ -13,6 +13,7 @@
             HorizontalOptions="Center" />
         <Grid ColumnDefinitions="Auto, 30, Auto">
             <!--three columns-->
+            <!-- TODO button text not displaying all the words- Android, windows -->
             <Button Grid.Column="0" Text="Test Button" WidthRequest="100"/>
             <Button Grid.Column="2" Text="Test Button" WidthRequest="100"/>
 
