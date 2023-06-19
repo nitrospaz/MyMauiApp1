@@ -9,6 +9,7 @@
     <ShellContent
         Title="Main Page"
         ContentTemplate="{DataTemplate local:MainPage}"
+        Icon="dotnet_bot.svg"
         Route="MainPage" />
 
     <ShellContent
