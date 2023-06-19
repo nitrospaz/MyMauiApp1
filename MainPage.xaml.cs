@@ -3,6 +3,7 @@
 public partial class MainPage : ContentPage
 {
 	int count = 0;
+	public const double DefaultFontSize = 24;
 
 	public MainPage()
 	{
@@ -19,6 +20,20 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
+	}
+}
+
+
+public class GlobalFontSizeExtension : IMarkupExtension<double>
+{
+	public double ProvideValue(IServiceProvider serviceProvider)
+	{
+		return MainPage.DefaultFontSize;
+	}
+
+	object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
+	{
+		return (this as IMarkupExtension<double>).ProvideValue(serviceProvider);
 	}
 }
 
