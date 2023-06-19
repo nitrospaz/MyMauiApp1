@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.NewPage1"
              Title="NewPage1">
+    <!-- This is the xaml that displays the controls and content, similar to a .NET Framework or .NET Core WPF application -->
+    <!-- I think of it as the css for a web page and the work is done in the .cs file -->
     <VerticalStackLayout>
         <Label 
             Text="Count: 0"

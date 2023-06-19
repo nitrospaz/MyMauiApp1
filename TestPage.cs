@@ -2,6 +2,7 @@ namespace MauiApp1;
 
 public class TestPage : ContentPage
 {
+	//Example: can code a page completely in C# without using XAML
 	int count = 0;
 
 	Label lblCounter = new Label

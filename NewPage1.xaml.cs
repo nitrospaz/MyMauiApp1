@@ -2,6 +2,9 @@ namespace MauiApp1;
 
 public partial class NewPage1 : ContentPage
 {
+	// Example: this is the code-behind file for the NewPage1.xaml file
+	// I didnt fill it out because I didnt want to type out all the code
+	// see my example in TestPage.cs
 	public NewPage1()
 	{
 		//this is the constructor
