@@ -6,6 +6,83 @@
     xmlns:local="clr-namespace:MauiApp1"
     Shell.FlyoutBehavior="Flyout">
 
+    <!-- can have tabs and flyout at the same time -->
+    <!-- flyouts creates hamburger menu icon and navigation menu-->
+    
+    <!-- tabs are always visible -->
+    <!-- tabs display on top left in windows and on bottom centered on android -->
+    
+    <!-- tab option 1 -->
+    <!--This way displays directly what is in the shellContent tags-->
+    <!--
+    <TabBar>
+        <ShellContent
+            Title="Main Page"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="dotnet_bot.svg"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="New Page1"
+            ContentTemplate="{DataTemplate local:NewPage1}"
+            Route="NewPage1" />
+
+        <ShellContent
+            Title="Layout Example"
+            ContentTemplate="{DataTemplate local:LayoutExample}"
+            Route="LayoutExample" />
+
+        <ShellContent
+            Title="Test Page"
+            ContentTemplate="{DataTemplate local:TestPage}"
+            Route="TestPage" />
+    </TabBar>
+    -->
+    <!-- end tab option 1-->
+        
+    <!-- tab option 2 -->
+    <!--This way displays what is in the shellContent tags inside a tab tag-->
+    <!--
+        Gotcha 1 is that the individual tab tags needs properties filled in otherwise 
+        it shows up as blank but clickable areas on android and on windows it
+        shows up as blank and not clickable areas
+    -->
+    <!--
+        Gotcha 2 is that the icons do not show up on the windows tabs but they do show up in android
+    -->
+    <TabBar>
+        <Tab Title="Main Page" Icon="dotnet_bot.svg">
+            <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </Tab>
+
+        <Tab Title="New Page1" Icon="dotnet_bot.svg">
+            <ShellContent
+            Title="New Page1"
+            ContentTemplate="{DataTemplate local:NewPage1}"
+            Route="NewPage1" />
+        </Tab>
+
+        <Tab Title="Layout Example" Icon="dotnet_bot.svg">
+            <ShellContent
+            Title="Layout Example"
+            ContentTemplate="{DataTemplate local:LayoutExample}"
+            Route="LayoutExample" />
+        </Tab>
+
+        <Tab Title="Test Page" Icon="dotnet_bot.svg">
+            <ShellContent
+            Title="Test Page"
+            ContentTemplate="{DataTemplate local:TestPage}"
+            Route="TestPage" />
+        </Tab>
+    </TabBar>
+    <!-- end tab option 2-->
+    
+    <!-- flyout option 1 -->
+    <!-- this content will be displayed in the flyout -->
     <ShellContent
         Title="Main Page"
         ContentTemplate="{DataTemplate local:MainPage}"
